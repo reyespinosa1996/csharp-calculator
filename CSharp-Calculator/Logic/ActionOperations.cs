@@ -2,12 +2,12 @@
 
 public static class ActionOperations
 {
-    public static void Exit()
+    
+    public static void Exit(ref bool flag)
     {
-        Console.WriteLine("Exiting program");
-        Environment.Exit(0);
+        Console.WriteLine("Exiting...");
+        flag = false;
     }
-
     public static void Sum()
     {
         Console.WriteLine("first number");
