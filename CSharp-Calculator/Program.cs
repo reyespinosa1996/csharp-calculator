@@ -37,9 +37,14 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine("*** Error, wrong choise ***");
-                    ActionOperations.Exit(ref flag);
+                    Console.WriteLine("*** Error: Unkown menu option. ***");
                 }
+
+            }
+            else
+            {
+                Console.WriteLine("*** Error: Invalid number format. Please enter integers only. *** ");
+                ActionOperations.Exit(ref flag);
             }
 
         }

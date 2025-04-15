@@ -10,46 +10,103 @@ public static class ActionOperations
     }
     public static void Sum()
     {
-        Console.WriteLine("first number");
-        int a = Convert.ToInt32(Console.ReadLine());
+        bool validinput = false;
+        while (!validinput)
+        {
+            try
+            {
+                Console.WriteLine("First number");
+                int a = Convert.ToInt32(Console.ReadLine());
         
-        Console.WriteLine("second number");
-        int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number");
+                int b = Convert.ToInt32(Console.ReadLine());
+            
+                Console.WriteLine($"Solution:  {a+b}");
+                validinput = true;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("*** Error: Invalid number format. Please enter integers only. *** ");
+
+            }
+
+        }
         
-        Console.WriteLine($"sol:  {a+b}");
     }
     
     public static void Subtract()
     {
-        Console.WriteLine("first number");
-        int a = Convert.ToInt32(Console.ReadLine());
+        bool validinput = false;
+        while (!validinput)
+        {
+            try
+            {
+                Console.WriteLine("First number");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Second number");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine($"Solution:  {a - b}");
+                validinput = true;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("*** Error: Invalid number format. Please enter integers only. *** ");
+            }
+            
+        }
         
-        Console.WriteLine("second number");
-        int b = Convert.ToInt32(Console.ReadLine());
-        
-        Console.WriteLine($"sol:  {a-b}");
     }
     
     public static void Times()
     {
-        Console.WriteLine("first number");
-        int a = Convert.ToInt32(Console.ReadLine());
+        bool validinput = false;
+        while (!validinput)
+        {
+            try
+            {
+                Console.WriteLine("First number");
+                int a = Convert.ToInt32(Console.ReadLine());
         
-        Console.WriteLine("second number");
-        int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number");
+                int b = Convert.ToInt32(Console.ReadLine());
         
-        Console.WriteLine($"sol:  {a*b}");
+                Console.WriteLine($"Solution:  {a*b}");
+                validinput = true;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("*** Error: Invalid number format. Please enter integers only. *** ");
+            }   
+
+        }
+        
     }
     
     public static void Div()
-    {        
-        Console.WriteLine("first number");
-        int a = Convert.ToInt32(Console.ReadLine());
+    {
+        bool validinput = false;
+        while (!validinput)
+        {
+            try
+            {
+
+                Console.WriteLine("First number");
+                int a = Convert.ToInt32(Console.ReadLine());
         
-        Console.WriteLine("second number");
-        int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number");
+                int b = Convert.ToInt32(Console.ReadLine());
         
-        Console.WriteLine($"sol:  {a/b}");
+                Console.WriteLine($"Soltuion:  {a/b}");
+                validinput = true;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("*** Error: Invalid number format. Please enter integers only. *** ");
+            }
+        }
+        
     }
 
     
