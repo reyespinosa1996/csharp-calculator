@@ -1,8 +1,14 @@
-with import <nixpkgs> {};
-stdenv.mkDerivation rec {
-  name = "env";
-  env = buildEnv { name = name; paths = buildInputs; };
-  buildInputs = [
-dotnet-sdk_9
+with import <nixpkgs> { };
+
+mkShell {
+  name = "dotnet-env";
+  packages = [
+    (
+      with dotnetCorePackages;
+      combinePackages [
+        sdk_8_0
+        sdk_9_0
+      ]
+    )
   ];
 }
